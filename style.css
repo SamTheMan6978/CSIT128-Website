@@ -1,0 +1,149 @@
+/* Default styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(8, 1, 34);
+  }
+  
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  header {
+    height: 100px;
+    width: 100%;
+    background: rgb(8, 1, 34);
+    opacity: .8;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+  }
+  
+  .logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Pacifico';
+    color: white;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    float: right;
+    line-height: 100px;
+  
+  }
+  
+  nav a {
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 1px;
+    padding: 36px 10px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    background: white;
+    color: darkblue;
+  }
+  
+  section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  section.banner-area {
+    background: url(images/gym1.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 0;
+  }
+  
+  .banner-area h2 {
+    font-size: 80px;
+    color: white;
+    left: 34%;
+    top: 20%;
+    position: absolute;
+    opacity: ;
+  }
+  
+  section.text-area {
+    padding: 90px;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    color: white;
+  }
+  
+  section.text-area h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0 0 20px;
+  }
+  
+  section.text-area p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Responsive styles */
+  
+  @media only screen and (max-width: 768px) {
+    /* Styles for tablets and smaller screens */
+    .logo {
+      width: 50%;
+      text-align: center;
+    }
+  
+    .logo a {
+      font-size: 24px;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    nav a {
+      display: block;
+      padding: 10px;
+    }
+  
+    section.banner-area h2 {
+      font-size: 40px;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  
+    section.text-area {
+      padding: 50px;
+    }
+  
+    section.text-area h1 {
+      font-size: 2em;
+    }
+  
+    section.text-area p {
+      font-size: 1em;
+    }
+  }
+  
