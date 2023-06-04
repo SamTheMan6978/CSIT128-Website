@@ -13,7 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="javascript" href="/javascript/app.js" />
   </head>
 
   <body>
@@ -95,5 +94,22 @@
           </div>
         </div>
     </footer>
+
+    <script type="text/javascript">
+      // Javascript code for responsive side bar
+      var menu = document.querySelector(".menu");
+      var menuBtn = document.querySelector(".menu-btn");
+      var closeBtn = document.querySelector(".close-btn");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+
+      
+    </script>
   </body>
 </html>
