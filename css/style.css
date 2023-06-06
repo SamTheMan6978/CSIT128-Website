@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.section-main {
+  position: relative;
+
+  width: 100%;
+  min-height: 50vh;
+  background: url(/images/gym1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-main h1 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.section-two h2{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+header {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.6s;
+  background: #161694;
+  padding: 15px 100px;
+}
+
+header .brand {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  align-items: left;
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+header .menu a:hover {
+  color: black;
+  background: white;
+}
+
+header .btn {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.section-two {
+  min-height: 100vh;
+  background: #111138;
+  padding: 20px 100px;
+}
+
+
+/* This part of the css style is for the cards */
+.program {
+    padding: 2%;
+    text-align: right;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 1;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.program-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 0 5%;
+    margin: 2% 0;
+    gap: 2rem;
+    overflow-x: visible;
+}
+
+.program-card{
+    position: relative;
+    height: 60vh;
+    width: 60vh;
+    min-width: 200px;
+    background-color: black;
+}
+
+.program-img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+.program-title {
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 1;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* used for hover details */
+.program-detail{
+    display: none;
+}
+
+.program-card:hover .program-img{
+    opacity: 0.8;
+    cursor:pointer;
+    transition: all 0.5s ease ;
+    
+}
+
+.program-card:hover .program-detail {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 40%;
+    padding: 5%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+
+/* End of card css */
+
+@media (max-width: 1123px) {
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    background: darkblue;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+/* Footer CSS */
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/* Responsive part for footer */
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/* End of footer CSS*/
+
+@media (max-width: 630px) {
+  .section-main h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+
+@media (max-width: 755px) {
+    .program-card:hover .program-detail {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .program-card:hover .program-detail {
+      font-size: 12px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .program-card:hover .program-detail {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
