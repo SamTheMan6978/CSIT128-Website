@@ -4,6 +4,7 @@
        
         <link rel="stylesheet" href="./css/memberships.css">
         <link rel="stylesheet" href="./css/ptfile.css">
+        
         <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,13 +34,13 @@
           <div class="pt">PERSONAL TRAINING</div>
 
           <div class="ptImage">
-            <image src="pt.png"></image>
+            <image src="./images/PT.png"></image>
           </div>
           <div class="pt2Image">
-            <image src="PT2.png"></image>
+            <image src="./images/PT2.png"></image>
           </div>
           <div class="pt3Image">
-            <image src="PT3.png"></image>
+            <image src="./images/PT3.png"></image>
           </div>
 
           <div class="ptDiscription">Experience personalized gym training with certified trainers, providing guidance, support, and motivation for fitness goals, from beginners to athletes. Invest in yourself and start your fitness journey with us today!</div>
@@ -47,31 +48,31 @@
           <div class="coach">Choose your coach</div>
 
           <div class="coach1">
-            <image src="personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-BSc sports and physical education<br><br>-Certified personal trainer Level 3<br><br>-Certified applied nutrition coach<br><br>Email: john@gmail.com<br><br>Phone: +917 51234567">
+            <image src="./images/personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-BSc sports and physical education<br><br>-Certified personal trainer Level 3<br><br>-Certified applied nutrition coach<br><br>Email: john@gmail.com<br><br>Phone: +917 51234567">
                 <div class="coach-description" id="coach1-description"></div>
             </image>
           </div>
           
           <div class="coach2">
-            <image src="personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Kickboxing black belt 3rd Degree<br><br>-Jiu-jitsu brown belt<br><br>-Certified personal trainer Level 3<br><br>Email: Cara@gmail.com<br><br>Phone: +917 50987654">
+            <image src="./images/personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Kickboxing black belt 3rd Degree<br><br>-Jiu-jitsu brown belt<br><br>-Certified personal trainer Level 3<br><br>Email: Cara@gmail.com<br><br>Phone: +917 50987654">
                 <div class="coach-description" id="coach2-description"></div>
             </image>
           </div>
           
           <div class="coach3">
-            <image src="personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Certified spin power instructor<br><br>-Certified personal trainer<br><br>-Certified nutrition & fat loss specialist<br><br>Email: Mathew@gmail.com<br><br>Phone: +917 50543254">
+            <image src="./images/personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Certified spin power instructor<br><br>-Certified personal trainer<br><br>-Certified nutrition & fat loss specialist<br><br>Email: Mathew@gmail.com<br><br>Phone: +917 50543254">
                 <div class="coach-description" id="coach3-description"></div>
             </image>
           </div>
           
           <div class="coach4">
-            <image src="personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Certified applied nutrition coach<br><br>-Certified rehab movement coach<br><br>-Certified personal trainer Level 3<br><br>Email: Sarah@gmail.com<br><br>Phone: +917 509844323">
+            <image src="./images/personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-Certified applied nutrition coach<br><br>-Certified rehab movement coach<br><br>-Certified personal trainer Level 3<br><br>Email: Sarah@gmail.com<br><br>Phone: +917 509844323">
                 <div class="coach-description" id="coach4-description"></div>
             </image>
           </div>
           
           <div class="coach5">
-            <image src="personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-BSc Sports and physical education<br><br>-National team Karate coach<br><br>-Certified gym instructor<br><br>Email: Peter@gmail.com<br><br>Phone: +917 576542343">
+            <image src="./images/personicon.png" class="coach-icon" data-description="Trainer Qualifications:<br><br>-BSc Sports and physical education<br><br>-National team Karate coach<br><br>-Certified gym instructor<br><br>Email: Peter@gmail.com<br><br>Phone: +917 576542343">
                 <div class="coach-description" id="coach5-description"></div>
             </image>
           </div>
@@ -105,26 +106,7 @@
           </footer>
 
           
-          <script>
-            // Declare a variable to store the coach data
-            let coachData;
-          
-            // Fetch coach data from JSON file
-            fetch('coaches.json')
-              .then(response => response.json())
-              .then(data => {
-                // Assign the coach data to the variable
-                coachData = data.coaches;
-                console.log('Coach data:', coachData);
-          
-                // Perform any desired operations with the data
-                // ...
-              })
-              .catch(error => {
-                console.log('Error fetching coach data:', error);
-              });
-          </script>
-          </script>
+          <script src="./js/json.js"></script>
           <script src="./js/script.js"></script>
           <script src="./js/sc.js"></script>
          
