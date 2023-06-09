@@ -1,0 +1,64 @@
+{
+    "coaches": [
+      {
+        "name": "John",
+        "qualifications": [
+          "BSc sports and physical education",
+          "Certified personal trainer Level 3",
+          "Certified applied nutrition coach"
+        ],
+        "contacts": {
+          "email": "john@gmail.com",
+          "phone": "+917 51234567"
+        }
+      },
+      {
+        "name": "Cara",
+        "qualifications": [
+          "Kickboxing black belt 3rd Degree",
+          "Jiu-jitsu brown belt",
+          "Certified personal trainer Level 3"
+        ],
+        "contacts": {
+          "email": "Cara@gmail.com",
+          "phone": "+917 50987654"
+        }
+      },
+      {
+        "name": "Mathew",
+        "qualifications": [
+          "Certified spin power instructor",
+          "Certified personal trainer",
+          "Certified nutrition & fat loss specialist"
+        ],
+        "contacts": {
+          "email": "Mathew@gmail.com",
+          "phone": "+917 50543254"
+        }
+      },
+      {
+        "name": "Sarah",
+        "qualifications": [
+          "Certified applied nutrition coach",
+          "Certified rehab movement coach",
+          "Certified personal trainer Level 3"
+        ],
+        "contacts": {
+          "email": "Sarah@gmail.com",
+          "phone": "+917 509844323"
+        }
+      },
+      {
+        "name": "Peter",
+        "qualifications": [
+          "BSc Sports and physical education",
+          "National team Karate coach",
+          "Certified gym instructor"
+        ],
+        "contacts": {
+          "email": "Peter@gmail.com",
+          "phone": "+917 576542343"
+        }
+      }
+    ]
+  }
