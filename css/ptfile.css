@@ -1,372 +1,371 @@
-
 body{
-    background: linear-gradient(to bottom, #24262b, #ffffff);
-    margin: 0;
+  background: linear-gradient(to bottom, #24262b, #ffffff);
+  margin: 0;
 }
 html, body {
-    height: 100%;
-    background-attachment: fixed;
-  }
+  height: 100%;
+  background-attachment: fixed;
+}
 .pt{
-    color:white;
-    position: absolute;
-    top: 150px;
-    left: 250px;
-    right:250px;
-    text-align: center;
-    font-size: 48px;
-    z-index: 2;
-    border-bottom: 5px solid white;
+  color:white;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  right:250px;
+  text-align: center;
+  font-size: 48px;
+  z-index: 2;
+  border-bottom: 5px solid white;
 }
 .ptImage{
-    position: absolute;
-            top: 300px; 
-            left: 50px;
-             
+  position: absolute;
+          top: 300px; 
+          left: 50px;
+           
 }
 .ptImage {
-    height: 300px; /* Adjust the desired height */
-  }
-  
-  .ptImage img {
-    height: 100%;
-    width: auto;
-  }
-.pt2Image{
-    position: absolute;
-            top: 300px; 
-            left: 535px;
-}
-.pt2Image {
-    height: 300px; /* Adjust the desired height */
-  }
-  
-  .pt2Image img {
-    height: 100%;
-    width: auto;
-  }
-  .pt3Image{
-    position: absolute;
-            top: 300px; 
-            right: 50px;
-            height: 300px; /* Adjust the desired height */
-            border-radius: 30px;
+  height: 300px; /* Adjust the desired height */
 }
 
-  
-  .pt3Image img {
-    height: 100%;
-    width: auto;
-  }
-  .ptDiscription{
-    position: absolute;
-    top: 750px;
-    left: 250px;
-    right:250px;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
-    text-align: center;
-    padding: 20px;
-    font-family: bell mt;
-    font-size: 20px;
-    color:white;
-    z-index: 2; 
-  }
+.ptImage img {
+  height: 100%;
+  width: auto;
+}
+.pt2Image{
+  position: absolute;
+          top: 300px; 
+          left: 535px;
+}
+.pt2Image {
+  height: 300px; /* Adjust the desired height */
+}
+
+.pt2Image img {
+  height: 100%;
+  width: auto;
+}
+.pt3Image{
+  position: absolute;
+          top: 300px; 
+          right: 50px;
+          height: 300px; /* Adjust the desired height */
+          border-radius: 30px;
+}
+
+
+.pt3Image img {
+  height: 100%;
+  width: auto;
+}
+.ptDiscription{
+  position: absolute;
+  top: 750px;
+  left: 250px;
+  right:250px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  text-align: center;
+  padding: 20px;
+  font-family: bell mt;
+  font-size: 20px;
+  color:white;
+  z-index: 2; 
+}
 .coach{
-    color:white;
-    position: absolute;
-    top: 1000px;
-    left: 575px;
-    right:575px;
-    text-align: center;
-    font-size: 48px;
-    z-index: 2;
-    border-bottom: 5px solid white;
-    font-family: bell mt;
+  color:white;
+  position: absolute;
+  top: 1000px;
+  left: 575px;
+  right:575px;
+  text-align: center;
+  font-size: 48px;
+  z-index: 2;
+  border-bottom: 5px solid white;
+  font-family: bell mt;
 }
 .coach1{
-    position: absolute;
-    top: 1200px; 
-    left: 50px;
-    height: 150px;
+  position: absolute;
+  top: 1200px; 
+  left: 50px;
+  height: 150px;
 
 }
 .coach1 img{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 .coach2{
-    position: absolute;
-    top: 1200px; 
-    left: 350px;
-    height: 150px;
+  position: absolute;
+  top: 1200px; 
+  left: 350px;
+  height: 150px;
 
 }
 .coach2 img{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 .coach3{
-    position: absolute;
-    top: 1200px; 
-    left: 690px;
-    height: 150px;
+  position: absolute;
+  top: 1200px; 
+  left: 690px;
+  height: 150px;
 
 }
 .coach3 img{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 .coach4{
-    position: absolute;
-    top: 1200px; 
-    right: 350px;
-    height: 150px;
+  position: absolute;
+  top: 1200px; 
+  right: 350px;
+  height: 150px;
 
 }
 .coach4 img{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 .coach5{
-    position: absolute;
-    top: 1200px; 
-    right: 50px;
-    height: 150px;
+  position: absolute;
+  top: 1200px; 
+  right: 50px;
+  height: 150px;
 
 }
 .coach5 img{
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 .John{
-    position: absolute;
-    top: 1360px; 
-    left: 90px;
-    font-family: bell mt;
-    font-size: 28px;
-    color:#24262b;
+  position: absolute;
+  top: 1360px; 
+  left: 90px;
+  font-family: bell mt;
+  font-size: 28px;
+  color:#24262b;
 }
 .Cara{
-    position: absolute;
-    top: 1360px; 
-    left: 390px;
-    font-family: bell mt;
-    font-size: 28px;
-    color:#24262b;
+  position: absolute;
+  top: 1360px; 
+  left: 390px;
+  font-family: bell mt;
+  font-size: 28px;
+  color:#24262b;
 }
 .Mathew{
-    position: absolute;
-    top: 1360px; 
-    left: 715px;
-    font-family: bell mt;
-    font-size: 28px;
-    color:#24262b;
+  position: absolute;
+  top: 1360px; 
+  left: 715px;
+  font-family: bell mt;
+  font-size: 28px;
+  color:#24262b;
 }
 .Sarah{
-    position: absolute;
-    top: 1360px; 
-    right: 390px;
-    font-family: bell mt;
-    font-size: 28px;
-    color:#24262b;
+  position: absolute;
+  top: 1360px; 
+  right: 390px;
+  font-family: bell mt;
+  font-size: 28px;
+  color:#24262b;
 }
 .Peter{
-    position: absolute;
-    top: 1360px; 
-    right: 90px;
-    font-family: bell mt;
-    font-size: 28px;
-    color:#24262b;
+  position: absolute;
+  top: 1360px; 
+  right: 90px;
+  font-family: bell mt;
+  font-size: 28px;
+  color:#24262b;
 }
 
 .coach-icon {
-    height: 100%;
-    width: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .coach-info-container {
-    position: absolute;
-    top: 1460px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease;
-  }
-  
-  .coach-info-container.active {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .coach-info {
-    padding: 8px;
-    font-family: bell mt;
-    font-size: 20px;
-    color: white;
-    z-index: 2;
-    border-radius: 28px;
-    background-color: #24262b;
-    font-family: bell mt;
-    text-align: center;
-  }  
-  .coach-icon:hover {
-    transform: scale(1.1);
-  }
-  
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-  .coach1:hover .coach-description {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s;
-  }
-  header {
-    z-index: 900;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 100px;
-    transition: 0.6s;
-    background: #161694;
-    padding: 15px 100px;
-  }
-  
-  header .brand {
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    align-items: left;
-  }
-  
-  header .menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header .menu a {
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 0 30px;
-    padding: 0 10px;
-    border-radius: 20px;
-  }
-  
-  header .menu a:hover {
-    color: black;
-    background: white;
-  }
-  
-  header .btn {
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  
-  .container{
-    max-width: 1170px;
-    margin:auto;
-  }
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  ul{
-    list-style: none;
-  }
-  
-  .footer {
-    position: relative; /* Change position to relative */
-    margin-top: 100px; /* Change position to fixed */
-    bottom: -1700; /* Set bottom to 0 */
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
+.coach-info-container {
+  position: absolute;
+  top: 1460px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.coach-info-container.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.coach-info {
+  padding: 8px;
+  font-family: bell mt;
+  font-size: 20px;
+  color: white;
+  z-index: 2;
+  border-radius: 28px;
+  background-color: #24262b;
+  font-family: bell mt;
+  text-align: center;
+}  
+.coach-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.coach1:hover .coach-description {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+header {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.6s;
+  background: #161694;
+  padding: 15px 100px;
+}
+
+header .brand {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  align-items: left;
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+header .menu a:hover {
+  color: black;
+  background: white;
+}
+
+header .btn {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+
+.footer {
+  position: relative; /* Change position to relative */
+  margin-top: 100px; /* Change position to fixed */
+  bottom: -1700; /* Set bottom to 0 */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* Responsive part for footer */
+@media(max-width: 767px){
   .footer-col{
-     width: 25%;
-     padding: 0 15px;
-  }
-  .footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-  }
-  .footer-col h4::before{
-    content: '';
-    position: absolute;
-    left:0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-  }
-  .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-  }
-  .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  .footer-col ul li a:hover{
-    color: #ffffff;
-    padding-left: 8px;
-  }
-  .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255,255,255,0.2);
-    margin:0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-  }
-  .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
-  }
-  
-  /* Responsive part for footer */
-  @media(max-width: 767px){
-    .footer-col{
-      width: 50%;
-      margin-bottom: 30px;
-  }
-  }
-  @media(max-width: 574px){
-    .footer-col{
-      width: 100%;
-  }
-  }
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
