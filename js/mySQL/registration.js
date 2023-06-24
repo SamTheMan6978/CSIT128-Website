@@ -1,4 +1,3 @@
-
 const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql');
@@ -6,7 +5,6 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-  secret: 'your-secret-key',
   resave: false,
   saveUninitialized: false
 }));
@@ -49,7 +47,7 @@ app.post('/register', (req, res) => {
 
 app.get('/success', (req, res) => {
   if (req.session.userId) {
-    const sql = 'SELECT * FROM users WHERE id = ?';
+    const sql = 'SELECT * FROM user_info WHERE user_id = ?';
     connection.query(sql, [req.session.userId], (err, result) => {
       if (err) {
         console.error('Error retrieving user data from MySQL: ' + err.stack);
