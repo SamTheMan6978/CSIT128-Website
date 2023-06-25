@@ -1,55 +1,79 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+var http = require('http');
+var fs = require('fs');
+var path = require('path');
+var url = require('url');
 
-const app = express();
-const port = 3333;
+var imageDir = path.join(__dirname, '..', '..', 'images');
+var cssDir = path.join(__dirname, '..', '..', 'css');
+var javaScriptDir = path.join(__dirname, '..', '..', 'js');
+var htmlDir = path.join(__dirname, '..', '..', 'src');
 
-// Define the directories for different file types
-const imageDir = path.join(__dirname, '..', '..', 'images');
-const cssDir = path.join(__dirname, '..', '..', 'css');
-const javaScriptDir = path.join(__dirname, '..', '..', 'js');
-const htmlDir = path.join(__dirname, '..', '..', 'src');
+// Create an HTTP server listening on port 3333
+http.createServer(function (req, res) {
+  // Use the URL to parse the requested URL and get the file name
+  var parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+  var filePath = parsedUrl.pathname;
 
-// Route for the root URL
-app.get('/', (req, res) => {
-  const file = path.join(htmlDir, 'index.html');
-  res.sendFile(file);
-});
+  // Determine the file extension
+  var fileExtension = path.extname(filePath);
 
-// Route for CSS files
-app.get('/css/:filename', (req, res) => {
-  const file = req.params.filename;
-  res.sendFile(path.join(cssDir, file));
-});
-
-// Route for JavaScript files
-app.get('/js/:filename', (req, res) => {
-  const file = req.params.filename;
-  res.sendFile(path.join(javaScriptDir, file));
-});
-
-// Route for image files
-app.get('/images/:filename', (req, res) => {
-  const file = req.params.filename;
-  res.sendFile(path.join(imageDir, file));
-});
-
-// Wildcard route to handle all other pages
-app.get('*', (req, res) => {
-  const page = req.params[0]; // Access the captured parameter using req.params[0]
-  const file = path.join(htmlDir, page); // Assuming your HTML files have the .html extension
-
-  // Check if the file exists
-  if (fs.existsSync(file)) {
-    res.sendFile(file);
+  if (fileExtension === '.png' || fileExtension === '.jpg' || fileExtension === '.webp') {
+    // Serve images (PNG, JPG, and WebP)
+    var fileName = path.basename(filePath);
+    fs.readFile(path.join(imageDir, fileName), function (err, content) {
+      if (err) {
+        res.writeHead(404, { 'Content-type': 'text/plain' });
+        res.end('404 Not Found');
+      } else {
+        var contentType = '';
+        if (fileExtension === '.png') {
+          contentType = 'image/png';
+        } else if (fileExtension === '.jpg') {
+          contentType = 'image/jpeg';
+        } else if (fileExtension === '.webp') {
+          contentType = 'image/webp';
+        }
+        res.writeHead(200, { 'Content-type': contentType });
+        res.end(content);
+      }
+    });
+  } else if (fileExtension === '.css') {
+    // Serve CSS files
+    var fileName = path.basename(filePath);
+    fs.readFile(path.join(cssDir, fileName), function (err, content) {
+      if (err) {
+        res.writeHead(404, { 'Content-type': 'text/plain' });
+        res.end('404 Not Found');
+      } else {
+        res.writeHead(200, { 'Content-type': 'text/css' });
+        res.end(content);
+      }
+    });
+  } else if (fileExtension === '.js') {
+    // Serve JavaScript files
+    var fileName = path.basename(filePath);
+    fs.readFile(path.join(javaScriptDir, fileName), function (err, content) {
+      if (err) {
+        res.writeHead(404, { 'Content-type': 'text/plain' });
+        res.end('404 Not Found');
+      } else {
+        res.writeHead(200, { 'Content-type': 'application/javascript' });
+        res.end(content);
+      }
+    });
   } else {
-    // File does not exist, handle accordingly (e.g., return a 404 page)
-    res.status(404).send('404 Not Found');
+    // Serve HTML files
+    var fileName = filePath === '/' ? 'index.html' : path.basename(filePath);
+    fs.readFile(path.join(htmlDir, fileName), function (err, content) {
+      if (err) {
+        res.writeHead(404, { 'Content-type': 'text/plain' });
+        res.end('404 Not Found');
+      } else {
+        res.writeHead(200, { 'Content-type': 'text/html' });
+        res.end(content);
+      }
+    });
   }
-});
+}).listen(3333);
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+console.log("Server running at http://localhost:3333/");
