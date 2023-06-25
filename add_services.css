@@ -1,0 +1,19 @@
+ 
+ .center {
+    position: relative;
+    top: 200px;
+    text-align: center;
+  }
+  .addBtn{
+    position: relative;
+    top: 300px;
+    text-align: center;
+    
+  }
+
+  .addBtn input[type="submit"] {
+    width: 200px; /* Adjust the width as desired */
+    height: 50px; /* Adjust the height as desired */
+    font-size: 20px; /* Adjust the font size as desired */
+  }
+
