@@ -1,81 +1,55 @@
-var http = require('http');
-var fs = require('fs');
-var path = require('path');
-var url = require('url');
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
 
-var imageDir = path.join(__dirname, '..', '..', 'images/');
-var cssDir = path.join(__dirname, '..', '..', 'css/');
-var javaScriptDir = path.join(__dirname, '..', '..', 'js/');
-var htmlDir = path.join(__dirname, '..', '..', 'src/');
+const app = express();
+const port = 3333;
 
-// Create HTTP server listening on port 3333
-http.createServer(function (req, res) {
-  var query = url.parse(req.url, true).query;
-  var file;
-  console.log(query);
-  console.log(query.image);
+// Define the directories for different file types
+const imageDir = path.join(__dirname, '..', '..', 'images');
+const cssDir = path.join(__dirname, '..', '..', 'css');
+const javaScriptDir = path.join(__dirname, '..', '..', 'js');
+const htmlDir = path.join(__dirname, '..', '..', 'src');
 
-  if (query.png !== undefined) {
-    console.log("png ------------");
-    file = query.png;
-    fs.readFile(imageDir + file, function (err, content) {
-      if (err) {
-        console.log(err);
-      } else {
-        res.writeHead(200, { 'Content-type': 'image/png' });
-        res.end(content);
-      }
-    });
-  } else if (query.jpg !== undefined) {
-    console.log("jpg ------------");
-    file = query.jpg;
-    fs.readFile(imageDir + file, function (err, content) {
-      if (err) {
-        console.log(err);
-      } else {
-        res.writeHead(200, { 'Content-type': 'image/jpg' });
-        res.end(content);
-      }
-    });
-  } else if (query.css !== undefined) {
-    console.log("CSS ------------");
-    file = query.css;
-    fs.readFile(cssDir + file, function (err, content) {
-      if (err) {
-        console.log(err);
-      } else {
-        res.writeHead(200, { 'Content-type': 'text/css' });
-        res.end(content);
-      }
-    });
-  } else if (query.js !== undefined) {
-    console.log("JavaScript ------------");
-    file = query.js;
-    fs.readFile(javaScriptDir + file, function (err, content) {
-      if (err) {
-        console.log(err);
-      } else {
-        res.writeHead(200, { 'Content-type': 'application/javascript' });
-        res.end(content);
-      }
-    });
-  } else if (query.html !== undefined) {
-    console.log("HTML ------------");
-    file = query.html;
-    fs.readFile(htmlDir + file, function (err, content) {
-      if (err) {
-        console.log(err);
-      } else {
-        res.writeHead(200, { 'Content-type': 'text/html' });
-        res.end(content);
-      }
-    });
+// Route for the root URL
+app.get('/', (req, res) => {
+  const file = path.join(htmlDir, 'index.html');
+  res.sendFile(file);
+});
+
+// Route for CSS files
+app.get('/css/:filename', (req, res) => {
+  const file = req.params.filename;
+  res.sendFile(path.join(cssDir, file));
+});
+
+// Route for JavaScript files
+app.get('/js/:filename', (req, res) => {
+  const file = req.params.filename;
+  res.sendFile(path.join(javaScriptDir, file));
+});
+
+// Route for image files
+app.get('/images/:filename', (req, res) => {
+  const file = req.params.filename;
+  res.sendFile(path.join(imageDir, file));
+});
+
+// Wildcard route to handle all other pages
+app.get('*', (req, res) => {
+  const page = req.params[0]; // Access the captured parameter using req.params[0]
+  const file = path.join(htmlDir, page); // Assuming your HTML files have the .html extension
+
+  // Check if the file exists
+  if (fs.existsSync(file)) {
+    res.sendFile(file);
   } else {
-    // Return a 404 error for any other requests
-    res.writeHead(404, { 'Content-type': 'text/plain' });
-    res.end('404 Not Found');
+    // File does not exist, handle accordingly (e.g., return a 404 page)
+    res.status(404).send('404 Not Found');
   }
+});
 
-}).listen(3333);
-
-console.log("Server running at http://localhost:3333/");
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
