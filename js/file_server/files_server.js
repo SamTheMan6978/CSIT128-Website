@@ -4,6 +4,7 @@ const path = require('path');
 const url = require('url');
 const querystring = require('querystring');
 const mysql = require('mysql');
+const mySession = require('../mySQL/mySession');
 
 const imageDir = path.join(__dirname, '..', '..', 'images');
 const cssDir = path.join(__dirname, '..', '..', 'css');
@@ -105,19 +106,10 @@ http.createServer(function (req, res) {
 
           if (results.length > 0) {
             // Authentication successful
-            res.statusCode = 200;
-            res.setHeader('Content-Type', 'text/html');
-          res.write(`
-            <html>
-              <head>
-                <meta http-equiv="refresh" content="2; url=/index.html">
-              </head>
-              <body>
-                <p>Login successful. Redirecting to homepage...</p>
-              </body>
-            </html>
-          `);
-          res.end();
+            mySession.getMySession();
+            res.statusCode = 302;
+            res.setHeader('Location', '/userprofile.html');
+            res.end();
             
           } else {
             // Authentication failed
@@ -217,28 +209,4 @@ http.createServer(function (req, res) {
 
 console.log('Server running at http://localhost:3333/');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "admin",
-  database: "csit128_project"
-});
 
-con.connect(function (err) {
-  if (err) throw err;
-  console.log("Connected!");
-
-  var sql_table =
-    "CREATE TABLE IF NOT EXISTS user_info (" +
-  "user_fname VARCHAR(50)," +
-  "user_lname VARCHAR(50)," +
-  "user_phone VARCHAR(20)," +
-  "membershipType ENUM('Solo', 'Duo', 'Family')," +
-  "user_password VARCHAR(32)," +
-  "user_email VARCHAR(50))";
-
-  con.query(sql_table, function (err, result) {
-    if (err) throw err;
-    console.log("User Table created");
-  });
-});

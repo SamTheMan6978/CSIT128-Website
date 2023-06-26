@@ -122,7 +122,6 @@ exports.navigateToUserProfile = function (res, memObj) {
         res.write("document.getElementById(\"user_fname_display\").innerHTML = '" + memObj[0].user_fname + "';" + "\n");        
         res.write("document.getElementById(\"user_lname_display\").innerHTML = '" + memObj[0].user_lname + "';" + "\n");        
         res.write("document.getElementById(\"user_email_display\").innerHTML = '" + memObj[0].user_email + "';" + "\n");        
-        res.write("document.getElementById(\"emp_salary_display\").innerHTML = '" + memObj[0].user_phone + "';" + "\n");        
         res.write("document.getElementById(\"membership_display\").innerHTML = '" + memObj[0].membership + "';" + "\n");          
         res.write("</script>");
         return res.end();

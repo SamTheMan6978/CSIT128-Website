@@ -14,84 +14,83 @@
     />
     <link rel="stylesheet" href="../css/userprofile.css" />
   </head>
-<header>
-    <a href="#" class="brand">EcoFitness</a>
-    <div class="menu">
-      <div class="btn">
-        <i class="fas fa-times close-btn"></i>
+  <body>
+    <header>
+      <a href="#" class="brand">EcoFitness</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="./index.html">Home</a>
+        <a href="./memberships.html">Memberships</a>
+        <a href="./newuserclasses.html">Classes</a>
+        <a href="./PT.html">Personal Training</a>
+        <a href="./register.html">Sign Up</a>
+        <a href="./login.html">Login</a>
       </div>
-      <a href="./index.html">Home</a>
-      <a href="./memberships.html">Memberships</a>
-      <a href="./newuserclasses.html">Classes</a>
-      <a href="./PT.html">Personal Training</a>
-      <a href="./register.html">Sign Up</a>
-      <a href="./login.html">Login</a>
-    </div>
-    <div class="btn">
-      <i class="fas fa-bars menu-btn"></i>
-    </div>
-  </header>
-  <section class="section-main">
-<body>
-    <div style="text-align:right;">
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+
+    <section class="section-main">
+      <div style="text-align:right;">
         <a href='./index.html'>Home Page</a>&nbsp;&nbsp;<a href='logout'>logout</a>
-    </div>
-    <h1 style="text-align:center;">User Profile Page</h1>
-    <table class="center">
+      </div>
+      <h1 style="text-align:center;">User Profile Page</h1>
+      <table class="center">
         <tr>
-            <td>
-                <label id="user_id">Membership ID:</label>&nbsp;&nbsp;<label id="user_id_display"></label>
-            </td>
+          <td>
+            <label id="user_id">Membership ID:</label>&nbsp;&nbsp;<label id="user_id_display">{{user_id_display}}</label>
+          </td>
         </tr>
         <tr>
-            <td>
-                <label id="user_fname">First Name:</label>&nbsp;&nbsp;<label id="user_fname_display"></label>
-            </td>
+          <td>
+            <label id="user_fname">First Name:</label>&nbsp;&nbsp;<label id="user_fname_display">{{user_fname_display}}</label>
+          </td>
         </tr>
         <tr>
-            <td>
-                <label id="user_lname">Last Name:</label>&nbsp;&nbsp;<label id="user_lname_display"></label>
-            </td>
+          <td>
+            <label id="user_lname">Last Name:</label>&nbsp;&nbsp;<label id="user_lname_display">{{user_lname_display}}</label>
+          </td>
         </tr>
         <tr>
-            <td>
-                <label id="user_email">Email:</label>&nbsp;&nbsp;<label id="user_email_display"></label>
-            </td>
+          <td>
+            <label id="user_email">Email:</label>&nbsp;&nbsp;<label id="user_email_display">{{user_email_display}}</label>
+          </td>
         </tr>
         <tr>
-            <td>
-                <label id="membership">Membership Type:</label>&nbsp;&nbsp;<label id="membership_display"></label>
-            </td>
+          <td>
+            <label id="membership">Membership Type:</label>&nbsp;&nbsp;<label id="membership_display">{{membership_display}}</label>
+          </td>
         </tr>
-        <tr>
-            <td>
-                <label id="user_email">Email:</label>&nbsp;&nbsp;<label id="user_email_display"></label>
-            </td>
-        </tr>
-        <tr>
-    </table>
+      </table>
+    </section>
+
     <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col">
-              <h4>Follow Us</h4>
-                <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
-        </section>
-      </footer>
-
-    <br />
-    <br />
-</body>
-
-<script src="../js/app.js"></script>
-<script src="../js/sc.js"></script>
-<script src="../js/sc.js"></script>
-<script src="../js/mySQL/myModule.js"></script>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/app.js"></script>
+    <script src="../js/sc.js"></script>
+    <script src="../js/mySQL/myModule.js"></script>
+    <script>
+      document.getElementById("user_id_display").innerHTML = '{{user_id_display}}';
+      document.getElementById("user_fname_display").innerHTML = '{{user_fname_display}}';
+      document.getElementById("user_lname_display").innerHTML = '{{user_lname_display}}';
+      document.getElementById("user_email_display").innerHTML = '{{user_email_display}}';
+      document.getElementById("membership_display").innerHTML = '{{membership_display}}';
+    </script>
+  </body>
 </html>
-
