@@ -13,6 +13,12 @@ header {
   padding: 15px 100px;
 }
 
+.section-main {
+  position: relative;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
 header .brand {
   color: white;
   font-size: 30px;
@@ -126,6 +132,20 @@ ul{
 ul{
 	list-style: none;
 }
+
+/* Footer CSS */
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
 .footer{
 	background-color: #24262b;
     padding: 70px 0;
@@ -167,7 +187,7 @@ ul{
 }
 .footer-col ul li a:hover{
 	color: #ffffff;
-	padding-left: 8px;
+	padding-left: 4px;
 }
 .footer-col .social-links a{
 	display: inline-block;
@@ -200,30 +220,3 @@ ul{
 }
 
 /* End of footer CSS*/
-
-@media (max-width: 630px) {
-  .section-main h1 {
-    font-size: 50px;
-    line-height: 60px;
-  }
-}
-
-
-@media (max-width: 755px) {
-    .program-card:hover .program-detail {
-      font-size: 14px; /* Adjust font size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .program-card:hover .program-detail {
-      font-size: 12px; /* Adjust font size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .program-card:hover .program-detail {
-      font-size: 14px; /* Adjust font size for smaller screens */
-    }
-  }
-

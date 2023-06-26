@@ -5,14 +5,6 @@ body {
 .section-main {
   position: relative;
 
-  width: 100%;
-  min-height: 50vh;
-  background: url(/images/gym1.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .section-main h1 {
