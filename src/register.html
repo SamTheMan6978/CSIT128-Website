@@ -24,11 +24,10 @@
       <i class="fas fa-bars menu-btn"></i>
     </div>
   </header>
-  <section class="section-main">
   <body>
     <div class="container">
       <h2>Registration</h2>
-      <form id="registrationForm" method="POST" action="/register">
+      <form id="registrationForm" Method="Post" action="/register">
         <div class="form-group">
           <label for="firstName">First Name:</label>
           <input
@@ -95,9 +94,9 @@
         <div class="form-group">
           <label for="membershipType">Membership Type:</label>
           <select id="membershipType" name="membershipType" required>
-            <option value="solo">Solo</option>
-            <option value="duo">Duo</option>
-            <option value="family">Family</option>
+            <option value="Solo">Solo</option>
+            <option value="Duo">Duo</option>
+            <option value="Family">Family</option>
           </select>
         </div>
         <div class="form-group">
@@ -105,10 +104,6 @@
         </div>
       </form>
     </div>
-
-  </section>
-
-
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -122,5 +117,6 @@
           </div>
         </div>
     </footer>
+    <script src="../js/register.js"></script>
   </body>
 </html>

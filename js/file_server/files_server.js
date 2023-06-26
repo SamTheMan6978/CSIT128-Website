@@ -79,7 +79,7 @@ http.createServer(function (req, res) {
     });
 
     req.on('end', function () {
-      const { username, password } = querystring.parse(body);
+      const { email, password } = querystring.parse(body);
 
       // Query the database to validate the username and password
       pool.getConnection((err, connection) => {
@@ -90,8 +90,8 @@ http.createServer(function (req, res) {
           return;
         }
 
-        const sql = 'SELECT * FROM user_info WHERE username = ? AND user_password = ?';
-        const values = [username, password];
+        const sql = 'SELECT * FROM user_info WHERE user_email = ? AND user_password = ?';
+        const values = [email, password];
 
         connection.query(sql, values, (err, results) => {
           connection.release(); // Release the connection back to the pool
@@ -127,9 +127,8 @@ http.createServer(function (req, res) {
 
 
     req.on('end', function () {
-      const { password, firstName, lastName, phone, membership, email } = querystring.parse(body);
+      const { firstName, lastName, phoneNumber, membershipType, password, email } = querystring.parse(body);
 
-      
       // Query the database to check if the email already exists
       pool.getConnection((err, connection) => {
         if (err) {
@@ -162,12 +161,14 @@ http.createServer(function (req, res) {
             const insertUserSql =
               'INSERT INTO user_info (user_fname, user_lname, user_phone, membership, user_password, user_email) ' +
               'VALUES (?, ?, ?, ?, ?, ?)';
-            const insertUserValues = [firstName, lastName, phone, membership, password, email];
+            const insertUserValues = [firstName, lastName, phoneNumber, membershipType, password, email];
 
+            console.log(insertUserValues);
             connection.query(insertUserSql, insertUserValues, (err, result) => {
               connection.release(); // Release the connection back to the pool
 
               if (err) {
+                console.log(err);
                 res.statusCode = 500;
                 res.setHeader('Content-Type', 'text/plain');
                 res.end('Internal Server Error');
@@ -211,13 +212,13 @@ con.connect(function (err) {
   console.log("Connected!");
 
   var sql_table =
-    "CREATE TABLE IF NOT EXISTS user_info (user_id INT AUTO_INCREMENT PRIMARY KEY, " +
-    "user_fname VARCHAR(50)," +
-    "user_lname VARCHAR(50)," +
-    "user_phone VARCHAR(20)," +
-    "membership ENUM('Solo', 'Duo', 'Family')," +
-    "user_password VARCHAR(32)," +
-    "user_email VARCHAR(50))";
+    "CREATE TABLE IF NOT EXISTS user_info (" +
+  "user_fname VARCHAR(50)," +
+  "user_lname VARCHAR(50)," +
+  "user_phone VARCHAR(20)," +
+  "membershipType ENUM('Solo', 'Duo', 'Family')," +
+  "user_password VARCHAR(32)," +
+  "user_email VARCHAR(50))";
 
   con.query(sql_table, function (err, result) {
     if (err) throw err;
