@@ -106,8 +106,19 @@ http.createServer(function (req, res) {
           if (results.length > 0) {
             // Authentication successful
             res.statusCode = 200;
-            res.setHeader('Content-Type', 'text/plain');
-            res.end('Login successful');
+            res.setHeader('Content-Type', 'text/html');
+          res.write(`
+            <html>
+              <head>
+                <meta http-equiv="refresh" content="2; url=/index.html">
+              </head>
+              <body>
+                <p>Login successful. Redirecting to homepage...</p>
+              </body>
+            </html>
+          `);
+          res.end();
+            
           } else {
             // Authentication failed
             res.statusCode = 401;
@@ -163,21 +174,27 @@ http.createServer(function (req, res) {
               'VALUES (?, ?, ?, ?, ?, ?)';
             const insertUserValues = [firstName, lastName, phoneNumber, membershipType, password, email];
 
-            console.log(insertUserValues);
             connection.query(insertUserSql, insertUserValues, (err, result) => {
               connection.release(); // Release the connection back to the pool
 
               if (err) {
-                console.log(err);
                 res.statusCode = 500;
                 res.setHeader('Content-Type', 'text/plain');
                 res.end('Internal Server Error');
                 return;
               }
 
-              res.statusCode = 200;
-              res.setHeader('Content-Type', 'text/plain');
-              res.end('Registration successful');
+              res.write(`
+            <html>
+              <head>
+                <meta http-equiv="refresh" content="2; url=/index.html">
+              </head>
+              <body>
+                <p>Registration successful. Redirecting to homepage...</p>
+              </body>
+            </html>
+          `);
+          res.end();
             });
           }
         });
